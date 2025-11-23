@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun!</title>
+    
+    
+<link rel="stylesheet" href="style.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="bgCanvas"></canvas>
+
+    <div class="container">
+        <section id="page-1" class="page active">
+            <h1 class="title-small">halo kamu...</h1>
+            <p>ada pesan spesial yang menunggu.</p>
+            <button class="btn" onclick="nextPage(2)">buka Pesan</button>
+        </section>
+
+        <section id="page-2" class="page">
+            <h1 class="title-big">Selamat Ulang Tahun!</h1>
+            <div class="cake-icon">🎂</div>
+            <p>waktu begitu cepat, ngga terasa kamu udah bertambah usia</p>
+            <button class="btn" onclick="nextPage(3)">lanjut</button>
+        </section>
+
+        <section id="page-3" class="page">
+            <h2>ucapan untukmu</h2>
+            <div class="message-box"><p id="typing-text"></p></div>
+            <button class="btn" onclick="nextPage(4)">lihat Kenangan</button>
+        </section>
+
+        <section id="page-4" class="page gallery-page">
+            <h2>album Kenangan</h2>
+            <p>beberapa momen indah yang terekam.</p>
+            <div class="photo-grid">
+                <img src="FOTO PERTAMA" alt="foto pertama">
+                <img src="FOTO KEDUA" alt="foto kedua">
+                <img src="FOTO KETIGA" alt="foto ketiga">
+                <img src="FOTO KEEMPAT" alt="foto keempat">
+                <img src="FOTO KELIMA" alt="foto kelima">
+                <img src="FOTO KEENAM" alt="foto keenam">
+                <img src="FOTO KETUJUH" alt="foto ketujuh">
+                <img src="FOTO KEDELAPAN" alt="foto kedelapan">
+            </div>
+            <p style="font-size: 0.8rem; margin-top:10px">*klik foto untuk perbesar</p>
+            <button class="btn" onclick="nextPage(5)">satu lagi...</button>
+        </section>
+
+        <section id="page-5" class="page">
+            <h2>make a wish</h2>
+            <p>semoga semua impianmu menjadi kenyataan.</p>
+            <div class="stars">✨ ⭐ ✨</div>
+            <p>dariku yang mendoakanmu. <br> <br> varel.</p>
+            <button class="btn btn-secondary" onclick="nextPage(1)">ulangi</button>
+        </section>
+    </div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
